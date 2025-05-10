@@ -48,17 +48,7 @@ const TokenOption={
 
 } 
 
- res.cookie('token',Token,TokenOption).status(200).json({
-
-  message:'user logged in successfully',
-
-  data:Token,
-
-  success:true,
-
-  error:false
-
- })
+ res.cookie('token',Token,TokenOption)
 
 }
 
