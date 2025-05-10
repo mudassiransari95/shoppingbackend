@@ -44,11 +44,22 @@ const TokenOption={
 
   httpOnly:true,
 
-   secure:true
+   secure:true,
+    sameSite: "None",
 
 } 
 
- res.cookie('token',Token,TokenOption)
+ res.cookie('token',Token,TokenOption).status(200).json({
+
+  message:'user logged in successfully',
+
+  data:Token,
+
+  success:true,
+
+  error:false
+
+ })
 
 }
 
